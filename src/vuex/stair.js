@@ -8,6 +8,11 @@ export const Stair = {
   getters: {
     problems: function (state) {
       return state.problems
+    },
+    getFullLinkByTitle: function (state) {
+      return function (title) {
+        return state.problems.filter(problem => { return problem.title === title })[0].full_link
+      }
     }
   },
   mutations: {

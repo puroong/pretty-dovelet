@@ -31,8 +31,7 @@
           id: this.id,
           passwd: this.passwd
         }).then(response => {
-          console.log(response)
-          if (response.data['success'] === false) {
+          if (response.data.success === false) {
             this.errorMessage = '로그인에 실패했습니다.'
           } else {
             this.$router.push({name: 'stair', params: {stairNum: 1}})

@@ -55,7 +55,7 @@
         <tbody>
           <tr v-for="problem in problems">
             <td>{{ (problem.solved == true)?'O':'X' }}</td>
-            <td>{{ problem.title }}</td>
+            <td><router-link :to="{name:'submit', query: {title: problem.title}}">{{ problem.title }}</router-link></td>
             <td>{{ problem.correct_rate }}</td>
             <td>{{ problem.published_date }}</td>
           </tr>

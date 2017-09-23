@@ -3,13 +3,14 @@ import Router from 'vue-router'
 import Login from '@/spa/login/index.vue'
 import Stair from '@/spa/stair/index.vue'
 import About from '@/spa/about/index.vue'
+import Submit from '@/spa/submit/index.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/login',
+      path: '/',
       name: 'login',
       component: Login
     },
@@ -22,6 +23,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/submit',
+      name: 'submit',
+      component: Submit
     }
   ]
 })
