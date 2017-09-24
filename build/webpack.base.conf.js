@@ -23,8 +23,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'ace-code-editor': 'ace-code-editor/lib/ace/ace.js'
+      '@': resolve('src')
     }
   },
   module: {

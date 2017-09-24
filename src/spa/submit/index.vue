@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!showResult">
+    <div v-show="!showResult">
       <div class="row">
         <navigation></navigation>
         <div class="col col-xs-6">
@@ -11,11 +11,12 @@
         </div>
       </div>
     </div>
-    <div v-else>
+    <div v-show="showResult">
       <div class="row">
         <result></result>
       </div>
     </div>
+    <hr>
     <div class="row">
       <button class="btn btn-primary center-block" @click="routeBack">뒤로가기</button>
     </div>

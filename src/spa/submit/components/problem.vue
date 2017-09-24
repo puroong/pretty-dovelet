@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div v-html="problemHtml"></div>
+    <h3>문제</h3>
+    <div class="problem" v-html="problemHtml"></div>
   </div>
 </template>
 
@@ -25,3 +26,10 @@
     }
   }
 </script>
+
+<style scoped>
+  .problem {
+    overflow-x: hidden;
+    height: 408px;
+  }
+</style>
