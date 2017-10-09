@@ -22,6 +22,11 @@
         <b-button variant="primary" @click="submit">로그인</b-button>
       </b-col>
     </b-row>
+    <b-row class="text-center">
+      <b-col v-show="loginFailed">
+        로그인에 실패했습니다.
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -34,17 +39,27 @@ export default {
     return {
       id: '',
       passwd: '',
-      logo: Logo
+      logo: Logo,
+      loginFailed: false
     }
   },
   methods: {
     submit () {
+      this.loginFailed = false
+
       var payload = {
         id: this.id,
         passwd: this.passwd
       }
 
       this.$store.dispatch('user/login', payload)
+      .then(success => {
+        if (success) {
+          this.$router.push({name: 'stair', params: {stairNum: '1'}})
+        } else {
+          this.loginFailed = true
+        }
+      })
     }
   }
 }
