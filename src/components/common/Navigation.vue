@@ -7,7 +7,7 @@
     <b-collapse is-nav id="nav_collapse">
       <b-nav is-nav-bar>
         <b-nav-item to="/#/1">Home</b-nav-item>
-        <b-nav-item to="/#/2">Stair</b-nav-item>
+        <b-nav-item :to="{name:'stair', params: {stairNum: 1}}">Stair</b-nav-item>
         <b-nav-item to="/#/3">About</b-nav-item>
 
         <b-nav-item-dropdown right>
